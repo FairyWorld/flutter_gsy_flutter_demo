@@ -1,0 +1,261 @@
+import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
+final random = math.Random();
+const stickHeader = 50.0;
+
+class StickSliverListDemoPage extends StatefulWidget {
+  final List<ExpendedModel?> dataList = List.generate(7, (index) {
+    return ExpendedModel(false, List.filled(random.nextInt(100), null));
+  });
+
+  StickSliverListDemoPage({super.key});
+
+  @override
+  _StickSliverListDemoPageState createState() =>
+      _StickSliverListDemoPageState();
+}
+
+class _StickSliverListDemoPageState extends State<StickSliverListDemoPage> {
+  int _titleIndex = 0;
+  bool _showTitleTopButton = false;
+
+  final ScrollController _scrollController = ScrollController();
+
+  final GlobalKey scrollKey = GlobalKey();
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(scrollChanged);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _scrollController.removeListener(scrollChanged);
+  }
+
+  scrollChanged() {
+    if (widget.dataList.isEmpty) {
+      return;
+    }
+    var item = widget.dataList.lastWhere((item) {
+      if (item!.globalKey.currentContext == null) {
+        return false;
+      }
+
+      ///获取 renderBox
+      RenderSliver? renderSliver =
+          item.globalKey.currentContext!.findRenderObject() as RenderSliver?;
+      if (renderSliver == null) {
+        return false;
+      }
+      return renderSliver.constraints.scrollOffset > 0;
+    }, orElse: () {
+      return null;
+    });
+    if (item == null) {
+      return;
+    }
+    int currentIndex = widget.dataList.indexOf(item);
+    if (currentIndex != _titleIndex) {
+      setState(() {
+        _titleIndex = currentIndex;
+      });
+    }
+    var needTopButton = _scrollController.position.pixels > 0;
+    if (needTopButton != _showTitleTopButton) {
+      setState(() {
+        _showTitleTopButton = needTopButton;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("StickSliverListDemoPage"),
+        ),
+        body: Stack(
+          children: <Widget>[
+            CustomScrollView(
+              key: scrollKey,
+              controller: _scrollController,
+              physics: const ClampingScrollPhysics(),
+              slivers: List.generate(widget.dataList.length, (index) {
+                return SliverExpandedList(
+                  widget.dataList[index],
+                  "header $index",
+                  valueChanged: (_) {
+                    setState(() {});
+                  },
+                );
+              }),
+            ),
+            StickHeader("header $_titleIndex",
+                showTopButton: _showTitleTopButton, callback: () {
+              var item = widget.dataList[_titleIndex]!;
+              RenderSliver renderSliver = item.globalKey.currentContext!
+                  .findRenderObject() as RenderSliver;
+              var position = _scrollController.position.pixels -
+                  renderSliver.constraints.scrollOffset;
+              _scrollController.position.jumpTo(position);
+            })
+          ],
+        ));
+  }
+}
+
+class SliverExpandedList extends StatefulWidget {
+  final ExpendedModel? expendedModel;
+  final String title;
+  final int visibleCount;
+  final ValueChanged? valueChanged;
+
+  const SliverExpandedList(this.expendedModel, this.title,
+      {super.key, this.visibleCount = 3, this.valueChanged});
+
+  @override
+  _SliverExpandedListState createState() => _SliverExpandedListState();
+}
+
+class _SliverExpandedListState extends State<SliverExpandedList> {
+  bool expanded = false;
+
+  toTop() {
+    ///获取 renderBox
+    RenderSliver? render = context.findRenderObject() as RenderSliver?;
+    if (render == null) {
+      return;
+    }
+    var position = Scrollable.of(context).position.pixels -
+        render.constraints.scrollOffset;
+    if (position >= 0) {
+      Scrollable.of(context).position.jumpTo(position);
+    }
+  }
+
+  ///大于可见数量才使用 查看更多
+  renderExpendedMore() {
+    return Container(
+      height: 50.0,
+      color: Colors.grey,
+      padding: const EdgeInsets.only(left: 10.0),
+      alignment: Alignment.center,
+      child: InkWell(
+        onTap: () {
+          if (expanded) {
+            ///获取 renderBox
+            toTop();
+          }
+          widget.valueChanged?.call(!expanded);
+          setState(() {
+            expanded = !expanded;
+          });
+        },
+        child: Container(
+          alignment: Alignment.center,
+          width: MediaQuery.sizeOf(context).width,
+          child: Text(
+            expanded ? "收起" : '查看更多',
+            style: const TextStyle(color: Colors.black),
+          ),
+        ),
+      ),
+    );
+  }
+
+  getListCount(bool needExpanded) {
+    return (expanded)
+        ? (needExpanded)
+            ? widget.expendedModel!.dataList.length + 2
+            : widget.expendedModel!.dataList.length + 1
+        : (needExpanded)
+            ? widget.visibleCount + 2
+            : widget.visibleCount + 1;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    bool needExpanded = (widget.expendedModel!.dataList.length > 3);
+    return SliverList(
+      key: widget.expendedModel!.globalKey,
+      delegate: SliverChildBuilderDelegate(
+        (BuildContext context, int index) {
+          ///增加bottom
+          if (!expanded && needExpanded && index == widget.visibleCount + 1) {
+            return renderExpendedMore();
+          }
+          if (index == widget.expendedModel!.dataList.length + 1) {
+            return renderExpendedMore();
+          }
+
+          ///增加header
+          if (index == 0) {
+            return StickHeader(widget.title);
+          }
+          return Card(
+            child: Container(
+              height: 60,
+              alignment: Alignment.centerLeft,
+              child: Text("Item $index"),
+            ),
+          );
+        },
+        childCount: getListCount(needExpanded),
+      ),
+    );
+  }
+}
+
+class StickHeader extends StatelessWidget {
+  final String title;
+  final bool showTopButton;
+  final VoidCallback? callback;
+
+  const StickHeader(this.title,
+      {super.key, this.showTopButton = false, this.callback});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: stickHeader,
+      color: Colors.deepPurple,
+      padding: const EdgeInsets.only(left: 10.0),
+      alignment: Alignment.centerLeft,
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: Text(
+              '我的 $title 头啊',
+              style: const TextStyle(color: Colors.white),
+            ),
+          ),
+          Visibility(
+            visible: showTopButton,
+            child: InkWell(
+              onTap: () {
+                callback?.call();
+              },
+              child: const Icon(Icons.vertical_align_top),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class ExpendedModel {
+  bool expended;
+
+  List dataList;
+
+  GlobalKey globalKey = GlobalKey();
+
+  ExpendedModel(this.expended, this.dataList);
+}

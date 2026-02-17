@@ -50,721 +50,176 @@
 
 ![](docs/images/demo.jpg)
 
-### 已有例子
+### demoRoutes（按分类表格）
 
-```dart
+#### 基础控件（39）
 
-Map<String, WidgetBuilder> demoRoutes = {
-  "文本输入框简单的 Controller": (context) {
-    return ContainerAsyncRouterPage(controller_demo_page.loadLibrary(),
-            (context) {
-          return controller_demo_page.ControllerDemoPage();
-        });
-  },
-  "实现控件圆角不同组合": (context) {
-    return ContainerAsyncRouterPage(clip_demo_page.loadLibrary(), (context) {
-      return clip_demo_page.ClipDemoPage();
-    });
-  },
-  "列表滑动监听": (context) {
-    return ContainerAsyncRouterPage(scroll_listener_demo_page.loadLibrary(),
-            (context) {
-          return scroll_listener_demo_page.ScrollListenerDemoPage();
-        });
-  },
-  "滑动到指定位置": (context) {
-    return ContainerAsyncRouterPage(scroll_to_index_demo_page.loadLibrary(),
-            (context) {
-          return scroll_to_index_demo_page.ScrollToIndexDemoPage();
-        });
-  },
-  "滑动到指定位置2": (context) {
-    return ContainerAsyncRouterPage(scroll_to_index_demo_page2.loadLibrary(),
-            (context) {
-          return scroll_to_index_demo_page2.ScrollToIndexDemoPage2();
-        });
-  },
-  "展示渐变带边框的文本": (context) {
-    return ContainerAsyncRouterPage(gradient_text_demo_page.loadLibrary(),
-            (context) {
-          return gradient_text_demo_page.GradientTextDemoPage();
-        });
-  },
-  "Transform 效果展示": (context) {
-    return ContainerAsyncRouterPage(transform_demo_page.loadLibrary(),
-            (context) {
-          return transform_demo_page.TransformDemoPage();
-        });
-  },
-  "计算另类文本行间距展示": (context) {
-    return ContainerAsyncRouterPage(text_line_height_demo_page.loadLibrary(),
-            (context) {
-          return text_line_height_demo_page.TextLineHeightDemoPage();
-        });
-  },
-  "简单上下刷新": (context) {
-    return ContainerAsyncRouterPage(refresh_demo_page.loadLibrary(), (context) {
-      return refresh_demo_page.RefreshDemoPage();
-    });
-  },
-  "简单上下刷新2": (context) {
-    return ContainerAsyncRouterPage(refresh_demo_page2.loadLibrary(), (context) {
-      return refresh_demo_page2.RefreshDemoPage2();
-    });
-  },
-  "简单上下刷新3": (context) {
-    return ContainerAsyncRouterPage(refresh_demo_page3.loadLibrary(), (context) {
-      return refresh_demo_page3.RefreshDemoPage3();
-    });
-  },
-  "通过绝对定位布局": (context) {
-    return ContainerAsyncRouterPage(positioned_demo_page.loadLibrary(),
-            (context) {
-          return positioned_demo_page.PositionedDemoPage();
-        });
-  },
-  "气泡提示框": (context) {
-    return ContainerAsyncRouterPage(bubble_demo_page.loadLibrary(), (context) {
-      return bubble_demo_page.BubbleDemoPage();
-    });
-  },
-  "Tag效果展示": (context) {
-    return ContainerAsyncRouterPage(tag_demo_page.loadLibrary(), (context) {
-      return tag_demo_page.TagDemoPage();
-    });
-  },
-  "共享元素跳转效果": (context) {
-    return ContainerAsyncRouterPage(honor_demo_page.loadLibrary(), (context) {
-      return honor_demo_page.HonorDemoPage();
-    });
-  },
-  "滑动验证": (context) {
-    return ContainerAsyncRouterPage(slider_verify_page.loadLibrary(),
-            (context) {
-          return slider_verify_page.SlideVerifyPage();
-        });
-  },
-  "warpContent实现": (context) {
-    return ContainerAsyncRouterPage(wrap_content_page.loadLibrary(), (context) {
-      return wrap_content_page.WrapContentPage();
-    });
-  },
-  "状态栏颜色修改（仅 App）": (context) {
-    return ContainerAsyncRouterPage(statusbar_demo_page.loadLibrary(),
-            (context) {
-          return statusbar_demo_page.StatusBarDemoPage();
-        });
-  },
-  "键盘弹出与监听（仅 App）": (context) {
-    return ContainerAsyncRouterPage(keyboard_demo_page.loadLibrary(),
-            (context) {
-          return keyboard_demo_page.KeyBoardDemoPage();
-        });
-  },
-  "控件动画组合展示（旋转加放大圆）": (context) {
-    return ContainerAsyncRouterPage(anima_demo_page.loadLibrary(), (context) {
-      return anima_demo_page.AnimaDemoPage();
-    });
-  },
-  "控件展开动画效果": (context) {
-    return ContainerAsyncRouterPage(anima_demo_page2.loadLibrary(), (context) {
-      return anima_demo_page2.AnimaDemoPage2();
-    });
-  },
-  "全局悬浮按键效果": (context) {
-    return ContainerAsyncRouterPage(floating_touch_demo_page.loadLibrary(),
-            (context) {
-          return floating_touch_demo_page.FloatingTouchDemoPage();
-        });
-  },
-  "全局设置字体大小": (context) {
-    return ContainerAsyncRouterPage(text_size_demo_page.loadLibrary(),
-            (context) {
-          return text_size_demo_page.TextSizeDemoPage();
-        });
-  },
-  "旧版实现富文本": (context) {
-    return ContainerAsyncRouterPage(rich_text_demo_page.loadLibrary(),
-            (context) {
-          return rich_text_demo_page.RichTextDemoPage();
-        });
-  },
-  "官方实现富文本": (context) {
-    return ContainerAsyncRouterPage(rich_text_demo_page2.loadLibrary(),
-            (context) {
-          return rich_text_demo_page2.RichTextDemoPage2();
-        });
-  },
-  "第三方 viewpager 封装实现": (context) {
-    return ContainerAsyncRouterPage(viewpager_demo_page.loadLibrary(),
-            (context) {
-          return viewpager_demo_page.ViewPagerDemoPage();
-        });
-  },
-  "列表滑动过程控件停靠效果": (context) {
-    return ContainerAsyncRouterPage(sliver_list_demo_page.loadLibrary(),
-            (context) {
-          return sliver_list_demo_page.SliverListDemoPage();
-        });
-  },
-  "验证码输入框": (context) {
-    return ContainerAsyncRouterPage(
-        verification_code_input_demo_page.loadLibrary(), (context) {
-      return verification_code_input_demo_page.VerificationCodeInputDemoPage();
-    });
-  },
-  "验证码输入框2": (context) {
-    return ContainerAsyncRouterPage(
-        verification_code_input_demo_page2.loadLibrary(), (context) {
-      return verification_code_input_demo_page2
-          .VerificationCodeInputDemoPage2();
-    });
-  },
-  "自定义布局展示效果": (context) {
-    return ContainerAsyncRouterPage(custom_multi_render_demo_page.loadLibrary(),
-            (context) {
-          return custom_multi_render_demo_page.CustomMultiRenderDemoPage();
-        });
-  },
-  "自定义布局实现云词图展示": (context) {
-    return ContainerAsyncRouterPage(cloud_demo_page.loadLibrary(), (context) {
-      return cloud_demo_page.CloudDemoPage();
-    });
-  },
-  "列表滑动停靠 （Stick）": (context) {
-    return ContainerAsyncRouterPage(stick_demo_page.loadLibrary(), (context) {
-      return stick_demo_page.StickDemoPage();
-    });
-  },
-  "列表滑动停靠 （Stick）+ 展开收回": (context) {
-    return ContainerAsyncRouterPage(stick_demo_page2.loadLibrary(), (context) {
-      return stick_demo_page2.StickExpendDemoPage();
-    });
-  },
-  "列表滑动停靠效果2 （Stick": (context) {
-    return ContainerAsyncRouterPage(sliver_stick_demo_page.loadLibrary(),
-            (context) {
-          return sliver_stick_demo_page.SliverStickListDemoPage();
-        });
-  },
-  "键盘顶起展示（仅 App）": (context) {
-    return ContainerAsyncRouterPage(input_bottom_demo_page.loadLibrary(),
-            (context) {
-          return input_bottom_demo_page.InputBottomDemoPage();
-        });
-  },
-  "Blur 高斯模糊效果": (context) {
-    return ContainerAsyncRouterPage(blur_demo_page.loadLibrary(), (context) {
-      return blur_demo_page.BlurDemoPage();
-    });
-  },
-  "控件动画变形效果": (context) {
-    return ContainerAsyncRouterPage(animation_container_demo_page.loadLibrary(),
-            (context) {
-          return animation_container_demo_page.AnimationContainerDemoPage();
-        });
-  },
-  "时钟动画绘制展示": (context) {
-    return ContainerAsyncRouterPage(tick_click_demo_page.loadLibrary(),
-            (context) {
-          return tick_click_demo_page.TickClickDemoPage();
-        });
-  },
-  "按键切换动画效果": (context) {
-    return ContainerAsyncRouterPage(anima_demo_page4.loadLibrary(), (context) {
-      return anima_demo_page4.AnimaDemoPage4();
-    });
-  },
-  "列表滑动过程 item 停靠动画效果": (context) {
-    return ContainerAsyncRouterPage(list_anim_demo_page.loadLibrary(),
-            (context) {
-          return list_anim_demo_page.ListAnimDemoPage();
-        });
-  },
-  "列表滑动过程 item 停靠动画效果2": (context) {
-    return ContainerAsyncRouterPage(list_anim_demo_page2.loadLibrary(),
-            (context) {
-          return list_anim_demo_page2.ListAnimDemoPage2();
-        });
-  },
-  "下弹筛选展示效果": (context) {
-    return ContainerAsyncRouterPage(drop_select_demo_page.loadLibrary(),
-            (context) {
-          return drop_select_demo_page.DropSelectDemoPage();
-        });
-  },
-  "文本弹出动画效果": (context) {
-    return ContainerAsyncRouterPage(anima_demo_page5.loadLibrary(), (context) {
-      return anima_demo_page5.AnimaDemoPage5();
-    });
-  },
-  "强大的自定义滑动与停靠结合展示": (context) {
-    return ContainerAsyncRouterPage(scroll_header_demo_page.loadLibrary(),
-            (context) {
-          return scroll_header_demo_page.ScrollHeaderDemoPage();
-        });
-  },
-  "自定义列表内sliver渲染顺序": (context) {
-    return ContainerAsyncRouterPage(custom_viewport_page.loadLibrary(),
-            (context) {
-          return custom_viewport_page.CustomViewportPage();
-        });
-  },
-  "点击弹出动画提示": (context) {
-    return ContainerAsyncRouterPage(anim_tip_demo_page.loadLibrary(),
-            (context) {
-          return anim_tip_demo_page.AnimTipDemoPage();
-        });
-  },
-  "列表停靠展开+回到当前头部": (context) {
-    return ContainerAsyncRouterPage(stick_sliver_list_demo_page.loadLibrary(),
-            (context) {
-          return stick_sliver_list_demo_page.StickSliverListDemoPage();
-        });
-  },
-  "使用 overflow 处理图片": (context) {
-    return ContainerAsyncRouterPage(overflow_image_page.loadLibrary(),
-            (context) {
-          return overflow_image_page.OverflowImagePage();
-        });
-  },
-  "展示 Align 排布控件": (context) {
-    return ContainerAsyncRouterPage(align_demo_page.loadLibrary(), (context) {
-      return align_demo_page.AlignDemoPage();
-    });
-  },
-  "通过不同尺寸计算方式展示比例": (context) {
-    return ContainerAsyncRouterPage(card_item_page.loadLibrary(), (context) {
-      return card_item_page.CardItemPage();
-    });
-  },
-  "多列表+顶部Tab效果展示": (context) {
-    return ContainerAsyncRouterPage(sliver_tab_demo_page.loadLibrary(),
-            (context) {
-          return sliver_tab_demo_page.SliverTabDemoPage();
-        });
-  },
-  "多列表+顶部Tab效果展示2": (context) {
-    return ContainerAsyncRouterPage(sliver_tab_demo_page2.loadLibrary(),
-            (context) {
-          return sliver_tab_demo_page2.SliverTabDemoPage2();
-        });
-  },
-  "多列表+顶部Tab效果展示3": (context) {
-    return ContainerAsyncRouterPage(sliver_tab_demo_page3.loadLibrary(),
-            (context) {
-          return sliver_tab_demo_page3.SliverTabDemoPage3();
-        });
-  },
-  "仿真书本翻页动画（仅APP）": (context) {
-    return ContainerAsyncRouterPage(book_page.loadLibrary(), (context) {
-      return book_page.BookPage();
-    });
-  },
-  "粒子动画效果": (context) {
-    return ContainerAsyncRouterPage(particle_page.loadLibrary(), (context) {
-      return particle_page.ParticlePage();
-    });
-  },
-  "动画背景效果": (context) {
-    return ContainerAsyncRouterPage(anim_bg_demo_page.loadLibrary(), (context) {
-      return anim_bg_demo_page.AnimBgDemoPage();
-    });
-  },
-  "手势效果": (context) {
-    return ContainerAsyncRouterPage(matrix_custom_painter_page.loadLibrary(),
-            (context) {
-          return matrix_custom_painter_page.MatrixCustomPainterDemo();
-        });
-  },
-  "一个有趣的底部跟随和停靠例子": (context) {
-    return ContainerAsyncRouterPage(
-        scroll_inner_content_demo_page.loadLibrary(), (context) {
-      return scroll_inner_content_demo_page.ScrollInnerContentDemoPage();
-    });
-  },
-  "一个有趣的圆形选择器": (context) {
-    return ContainerAsyncRouterPage(bottom_anim_nav_page.loadLibrary(),
-            (context) {
-          return bottom_anim_nav_page.BottomAnimNavPage();
-        });
-  },
-  "一个类似探探堆叠卡片例子": (context) {
-    return ContainerAsyncRouterPage(
-        index_stack_drag_card_demo_page.loadLibrary(), (context) {
-      return index_stack_drag_card_demo_page.IndexStackDragCardDemoPage();
-    });
-  },
-  "一个类似探探堆叠卡片例子2": (context) {
-    return ContainerAsyncRouterPage(
-        index_stack_drag_card_demo_page2.loadLibrary(), (context) {
-      return index_stack_drag_card_demo_page2.IndexStackDragCardDemoPage2();
-    });
-  },
-  "动画按键例子": (context) {
-    return ContainerAsyncRouterPage(anim_button_demo_page.loadLibrary(),
-            (context) {
-          return anim_button_demo_page.AnimButtonDemoPage();
-        });
-  },
-  "类似QQ发送图片的动画": (context) {
-    return ContainerAsyncRouterPage(anim_progress_img_demo_page.loadLibrary(),
-            (context) {
-          return anim_progress_img_demo_page.AnimProgressImgDemoPage();
-        });
-  },
-  "类似探探扫描的动画效果": (context) {
-    return ContainerAsyncRouterPage(anim_scan_demo_page.loadLibrary(),
-            (context) {
-          return anim_scan_demo_page.AnimScanDemoPage();
-        });
-  },
-  "圆弧形的 SeekBar（仅APP）": (context) {
-    return ContainerAsyncRouterPage(arc_seek_bar_demo_page.loadLibrary(),
-            (context) {
-          return arc_seek_bar_demo_page.ArcSeekBarDemoPage();
-        });
-  },
-  "一个国外友人很惊艳的动画效果": (context) {
-    return ContainerAsyncRouterPage(anim_bubble_gum.loadLibrary(), (context) {
-      return anim_bubble_gum.AnimBubbleGumDemoPage();
-    });
-  },
-  "纯 Canvas 绘制闹钟": (context) {
-    return ContainerAsyncRouterPage(canvas_click_demo_page.loadLibrary(),
-            (context) {
-          return canvas_click_demo_page.CanvasClickDemoPage();
-        });
-  },
-  "类似 boss 直聘我的页面联动效果": (context) {
-    return ContainerAsyncRouterPage(link_sliver_demo_page.loadLibrary(),
-            (context) {
-          return link_sliver_demo_page.LinkSliverDemoPage();
-        });
-  },
-  "结合 Matrix 的拖拽": (context) {
-    return ContainerAsyncRouterPage(drag_img_demo_page.loadLibrary(),
-            (context) {
-          return drag_img_demo_page.DragImgDemoPage();
-        });
-  },
-  "彩色进度条": (context) {
-    return ContainerAsyncRouterPage(color_progress_demo_page.loadLibrary(),
-            (context) {
-          return color_progress_demo_page.ColorProgressDemoPage();
-        });
-  },
-  "第三方的动画字体": (context) {
-    return ContainerAsyncRouterPage(anim_text_demo_page.loadLibrary(),
-            (context) {
-          return anim_text_demo_page.AnimTextDemoPage();
-        });
-  },
-  "首尾添加数据不会抖动": (context) {
-    return ContainerAsyncRouterPage(chat_list_scroll_demo_page.loadLibrary(),
-            (context) {
-          return chat_list_scroll_demo_page.ChatListScrollDemoPage();
-        });
-  },
-  "首尾添加数据不会抖动2": (context) {
-    return ContainerAsyncRouterPage(chat_list_scroll_demo_page_2.loadLibrary(),
-            (context) {
-          return chat_list_scroll_demo_page_2.ChatListScrollDemoPage2();
-        });
-  },
-  "测试路由嵌套": (context) {
-    return ContainerAsyncRouterPage(route_demo_page.loadLibrary(), (context) {
-      return route_demo_page.RouteDemoPage();
-    });
-  },
-  "测试 canvas 阴影": (context) {
-    return ContainerAsyncRouterPage(shader_canvas_demo_page.loadLibrary(),
-            (context) {
-          return shader_canvas_demo_page.ShaderCanvasDemoPage();
-        });
-  },
-  "控件动画切换效果": (context) {
-    ///对应文章解析  https://juejin.cn/post/7111071430292275213
-    return ContainerAsyncRouterPage(anim_switch_layout_demo_page.loadLibrary(),
-            (context) {
-          return anim_switch_layout_demo_page.AnimSwitchLayoutDemoPage();
-        });
-  },
-  "ListView 嵌套 ViewPager 解决斜着滑动问题": (context) {
-    ///对应文章解析 https://juejin.cn/post/7116267156655833102
-    return ContainerAsyncRouterPage(vp_list_demo_page.loadLibrary(), (context) {
-      return vp_list_demo_page.VPListView();
-    });
-  },
-  "垂直  ViewPager 嵌套垂直 ListView ": (context) {
-    ///对应文章解析 https://juejin.cn/post/7116267156655833102
-    return ContainerAsyncRouterPage(vp_list_demo_page.loadLibrary(), (context) {
-      return vp_list_demo_page.VPNestListView();
-    });
-  },
-  "垂直  ListView 嵌套垂直  ViewPager": (context) {
-    ///对应文章解析 https://juejin.cn/post/7116267156655833102
-    return ContainerAsyncRouterPage(vp_list_demo_page.loadLibrary(), (context) {
-      return vp_list_demo_page.ListViewNestVP();
-    });
-  },
-  "垂直  ListView 联动  ListView": (context) {
-    ///对应文章解析 https://juejin.cn/post/7116267156655833102
-    return ContainerAsyncRouterPage(vp_list_demo_page.loadLibrary(), (context) {
-      return vp_list_demo_page.ListViewLinkListView();
-    });
-  },
-  "3D 透视卡片": (context) {
-    ///对应文章解析  https://juejin.cn/post/7124064789763981326
-    return ContainerAsyncRouterPage(card_perspective_demo_page.loadLibrary(),
-            (context) {
-          return card_perspective_demo_page.CardPerspectiveDemoPage();
-        });
-  },
-  "3D 卡片旋转": (context) {
-    ///对应文章解析  https://juejin.cn/post/7124064789763981326
-    return ContainerAsyncRouterPage(card_3d_demo_page.loadLibrary(), (context) {
-      return card_3d_demo_page.Card3DDemoPage();
-    });
-  },
-  "硬核 3D 卡片旋转": (context) {
-    ///对应文章解析 https://juejin.cn/post/7129239231473385503
-    return ContainerAsyncRouterPage(card_real_3d_demo_page.loadLibrary(),
-            (context) {
-          return card_real_3d_demo_page.CardReal3DDemoPage();
-        });
-  },
-  "3D Dash": (context) {
-    ///对应文章解析 https://juejin.cn/post/7129239231473385503
-    return ContainerAsyncRouterPage(dash_3d_demo_page.loadLibrary(), (context) {
-      return dash_3d_demo_page.Dash3dDemoPage();
-    });
-  },
-  "展示 canvas transform": (context) {
-    ///对应文章解析 https://juejin.cn/post/7129239231473385503
-    return ContainerAsyncRouterPage(transform_canvas_demo_page.loadLibrary(),
-            (context) {
-          return transform_canvas_demo_page.TransformCanvasDemoPage();
-        });
-  },
-  "rive 掘金 logo": (context) {
-    ///对应文章解析  https://juejin.cn/post/7126661045564735519
-    return ContainerAsyncRouterPage(anim_juejin_logo_demo_page.loadLibrary(),
-            (context) {
-          return anim_juejin_logo_demo_page.AnimJueJinLogoDemoPage();
-        });
-  },
-  "掘金 3d logo": (context) {
-    ///对应文章解析 https://juejin.cn/post/7129239231473385503
-    return ContainerAsyncRouterPage(juejin_3d_logo_demo_page.loadLibrary(),
-            (context) {
-          return juejin_3d_logo_demo_page.JueJin3DLogoDemoPage();
-        });
-  },
-  "掘金更 3d logo": (context) {
-    ///对应文章解析 https://juejin.cn/post/7129239231473385503
-    return ContainerAsyncRouterPage(juejin_3d_box_logo_demo_page.loadLibrary(),
-            (context) {
-          return juejin_3d_box_logo_demo_page.JueJin3DBoxLogoDemoPage();
-        });
-  },
-  "png shadow": (context) {
-    return ContainerAsyncRouterPage(png_shadow_demo_page.loadLibrary(),
-            (context) {
-          return png_shadow_demo_page.PngShadowDemoPage();
-        });
-  },
-  "path 路径 png 效果": (context) {
-    return ContainerAsyncRouterPage(custom_shader_path_demo_page.loadLibrary(),
-            (context) {
-          return custom_shader_path_demo_page.CustomShaderPathDemoPage();
-        });
-  },
-  "列表联动 BottomSheet 效果": (context) {
-    return ContainerAsyncRouterPage(
-        list_link_bottomsheet_demo_page.loadLibrary(), (context) {
-      return list_link_bottomsheet_demo_page.ListLinkBottomSheetDemoPage();
-    });
-  },
-  "DraggableSheet 的 stick 效果": (context) {
-    return ContainerAsyncRouterPage(
-        demo_draggable_sheet_stick_page.loadLibrary(), (context) {
-      return demo_draggable_sheet_stick_page.DemoDraggableSheetStickPage();
-    });
-  },
-  "异步调用的顺序执行": (context) {
-    return ContainerAsyncRouterPage(async_to_sync_call_page.loadLibrary(),
-            (context) {
-          return async_to_sync_call_page.AsyncToSyncCallPage();
-        });
-  },
-  "点击爆炸的五角星（ChatGPT 生成代码）": (context) {
-    return ContainerAsyncRouterPage(star_bomb_button_page.loadLibrary(),
-            (context) {
-          return star_bomb_button_page.StarBombButtonPage();
-        });
-  },
-  "有趣画廊": (context) {
-    return ContainerAsyncRouterPage(photo_gallery_demo_page.loadLibrary(),
-            (context) {
-          return photo_gallery_demo_page.PhotoGalleryDemoPage();
-        });
-  },
-  "有趣的文本撕裂动画": (context) {
-    return ContainerAsyncRouterPage(tear_text_demo_page.loadLibrary(),
-            (context) {
-          return tear_text_demo_page.TearTextDemoPage();
-        });
-  },
-  "自适应横竖列表": (context) {
-    return ContainerAsyncRouterPage(unbounded_listview.loadLibrary(),
-            (context) {
-          return unbounded_listview.UnboundedListViewDemoPage();
-        });
-  },
-  "PageView嵌套PageView": (context) {
-    return ContainerAsyncRouterPage(
-        pageview_in_pageview_demo_page.loadLibrary(), (context) {
-      return pageview_in_pageview_demo_page.PageViewInPageViewDemoPage();
-    });
-  },
-  "手势密码": (context) {
-    return ContainerAsyncRouterPage(gesture_password_demo_page.loadLibrary(),
-            (context) {
-          return gesture_password_demo_page.GesturePasswordDemoPage();
-        });
-  },
-  "link scroll": (context) {
-    return ContainerAsyncRouterPage(link_scroll_page.loadLibrary(), (context) {
-      return link_scroll_page.LinkListViewPage();
-    });
-  },
-  "glass": (context) {
-    return ContainerAsyncRouterPage(glass_demo_page.loadLibrary(), (context) {
-      return glass_demo_page.GlassDemoPage();
-    });
-  },
-  "liquid glass": (context) {
-    return ContainerAsyncRouterPage(liquid_glass_demo.loadLibrary(), (context) {
-      return liquid_glass_demo.LiquidGlassShaderView();
-    });
-  },
-  "liquid glass 2": (context) {
-    return ContainerAsyncRouterPage(liquid_glass_demo2.loadLibrary(),
-            (context) {
-          return liquid_glass_demo2.LiquidGlassShaderView2();
-        });
-  },
-  "粒子动画": (context) {
-    return ContainerAsyncRouterPage(attractor_page.loadLibrary(),
-            (context) {
-          return attractor_page.AttractorPage();
-        });
-  },
-  "星云动画": (context) {
-    return ContainerAsyncRouterPage(galaxy_scene_page.loadLibrary(), (context) {
-      return galaxy_scene_page.GalaxyScene();
-    });
-  },
-  "霓虹滑块，100%高亮": (context) {
-    return ContainerAsyncRouterPage(neon_slider_page.loadLibrary(), (context) {
-      return neon_slider_page.NeonSliderPage();
-    });
-  },
-  "Radial lines": (context) {
-    return ContainerAsyncRouterPage(radial_lines_page.loadLibrary(), (context) {
-      return radial_lines_page.RadialLinesPage();
-    });
-  },
-  "炫酷爆炸粒子": (context) {
-    return ContainerAsyncRouterPage(radial_lines_page.loadLibrary(), (context) {
-      return boom_particle_page.BoomParticlePage();
-    });
-  },
-  "Black hole": (context) {
-    return ContainerAsyncRouterPage(black_hole_simulation_page.loadLibrary(),
-            (context) {
-          return black_hole_simulation_page.BlackHoleSimulation();
-        });
-  },
-  "流体太极": (context) {
-    return ContainerAsyncRouterPage(stream_taichi_page.loadLibrary(),
-            (context) {
-          return stream_taichi_page.NebulaTaiChiPage();
-        });
-  },
-  "黑洞流体": (context) {
-    return ContainerAsyncRouterPage(black_hole_page.loadLibrary(),
-            (context) {
-          return black_hole_page.GalaxyParticleScreen();
-        });
-  },
-  "太极粒子": (context) {
-    return ContainerAsyncRouterPage(taichi_page.loadLibrary(), (context) {
-      return taichi_page.TaiChiMasterpiece();
-    });
-  },
-  "破坏杀·罗针": (context) {
-    return ContainerAsyncRouterPage(akaza_page.loadLibrary(), (context) {
-      return akaza_page.AkazaCompassPage();
-    });
-  },
-  "骚气滑动列表": (context) {
-    return ContainerAsyncRouterPage(tornado_scroll_demo.loadLibrary(),
-            (context) {
-          return tornado_scroll_demo.TornadoScrollDemo();
-        });
-  },
-  "骚气粒子效果": (context) {
-    return ContainerAsyncRouterPage(particle_morphing_page.loadLibrary(),
-            (context) {
-          return particle_morphing_page.ParticleMorphingPage();
-        });
-  },
-  "炫酷圣诞树": (context) {
-    return ContainerAsyncRouterPage(combined_scene_page.loadLibrary(),
-            (context) {
-          return combined_scene_page.CombinedScenePage();
-        });
-  },
-  "炫酷二维码": (context) {
-    return ContainerAsyncRouterPage(notion_qrcode_page.loadLibrary(),
-            (context) {
-          return notion_qrcode_page.NotionFinalQRCodeEntryPage();
-        });
-  },
-  "Cool Disco Sphere": (context) {
-    return ContainerAsyncRouterPage(disco_sphere_page.loadLibrary(),
-            (context) {
-          return disco_sphere_page.DiscoSphereFinalFusionPage();
-        });
-  },
-  "Cool Spatial Grid": (context) {
-    return ContainerAsyncRouterPage(spatial_grid_page.loadLibrary(), (context) {
-      return spatial_grid_page.SpatialGridPage();
-    });
-  },
-  "Shock Wave Chat": (context) {
-    return ContainerAsyncRouterPage(shock_wave_chat_page.loadLibrary(),
-            (context) {
-          return shock_wave_chat_page.ShockwaveChatPage();
-        });
-  },
-  "Particle Effect": (context) {
-    return ContainerAsyncRouterPage(particle_effect_screen.loadLibrary(),
-            (context) {
-          return particle_effect_screen.ParticleEffectScreen();
-        });
-  },
-  "Mosaic Scanner ": (context) {
-    return ContainerAsyncRouterPage(mosaic_scanner_page.loadLibrary(),
-            (context) {
-          return mosaic_scanner_page.MosaicScannerPage();
-        });
-  }
-  
-};
-```
+| # | 名称 | 页面文件 |
+|---|---|---|
+| 1 | 文本输入框简单的 Controller | `widget/basic/controller_demo_page.dart` |
+| 2 | 实现控件圆角不同组合 | `widget/basic/clip_demo_page.dart` |
+| 6 | 展示渐变带边框的文本 | `widget/basic/gradient_text_demo_page.dart` |
+| 7 | Transform 效果展示 | `widget/basic/transform_demo_page.dart` |
+| 8 | 计算另类文本行间距展示 | `widget/basic/text_line_height_demo_page.dart` |
+| 9 | 简单上下刷新 | `widget/basic/refresh_demo_page.dart` |
+| 10 | 简单上下刷新2 | `widget/basic/refresh_demo_page2.dart` |
+| 11 | 简单上下刷新3 | `widget/scroll/custom_pull/refresh_demo_page3.dart` |
+| 12 | 通过绝对定位布局 | `widget/basic/positioned_demo_page.dart` |
+| 13 | 气泡提示框 | `widget/basic/bubble/bubble_demo_page.dart` |
+| 14 | Tag效果展示 | `widget/basic/tag_demo_page.dart` |
+| 15 | 共享元素跳转效果 | `widget/basic/honor_demo_page.dart` |
+| 17 | warpContent实现 | `widget/basic/wrap_content_page.dart` |
+| 18 | 状态栏颜色修改（仅 App） | `widget/basic/statusbar_demo_page.dart` |
+| 19 | 键盘弹出与监听（仅 App） | `widget/basic/keyboard_demo_page.dart` |
+| 22 | 全局悬浮按键效果 | `widget/basic/floating_touch_demo_page.dart` |
+| 23 | 全局设置字体大小 | `widget/basic/text_size_demo_page.dart` |
+| 24 | 旧版实现富文本 | `widget/basic/rich_text_demo_page.dart` |
+| 25 | 官方实现富文本 | `widget/basic/rich_text_demo_page2.dart` |
+| 28 | 验证码输入框 | `widget/basic/verification_code_input_demo_page.dart` |
+| 29 | 验证码输入框2 | `widget/basic/verification_code_input_demo_page2.dart` |
+| 30 | 自定义布局展示效果 | `widget/basic/custom_multi_render_demo_page.dart` |
+| 31 | 自定义布局实现云词图展示 | `widget/basic/cloud/cloud_demo_page.dart` |
+| 35 | 键盘顶起展示（仅 App） | `widget/basic/input_bottom_demo_page.dart` |
+| 42 | 下弹筛选展示效果 | `widget/basic/drop_select_menu/drop_select_demo_page.dart` |
+| 48 | 使用 overflow 处理图片 | `widget/basic/overflow_image_page.dart` |
+| 49 | 展示 Align 排布控件 | `widget/basic/align_demo_page.dart` |
+| 50 | 通过不同尺寸计算方式展示比例 | `widget/basic/card_item_page.dart` |
+| 59 | 一个有趣的圆形选择器 | `widget/basic/bottom_anim_nav_page.dart` |
+| 60 | 一个类似探探堆叠卡片例子 | `widget/basic/index_stack_drag_card_demo_page.dart` |
+| 61 | 一个类似探探堆叠卡片例子2 | `widget/basic/index_stack_drag_card_demo_page2.dart` |
+| 70 | 彩色进度条 | `widget/basic/color_progress_demo_page.dart` |
+| 72 | 首尾添加数据不会抖动 | `widget/basic/chat_list_scroll_demo_page.dart` |
+| 73 | 首尾添加数据不会抖动2 | `widget/basic/chat_list_scroll_demo_page_2.dart` |
+| 74 | 测试路由嵌套 | `widget/basic/route_demo_page.dart` |
+| 89 | png shadow | `widget/basic/png_shadow_demo_page.dart` |
+| 93 | 异步调用的顺序执行 | `widget/basic/async_to_sync_call_page.dart` |
+| 110 | Black hole | `widget/visual/black_hole_simulation_page.dart` |
+| 114 | 破坏杀·罗针 | `widget/basic/akaza_page.dart` |
+
+#### 列表滚动（31）
+
+| # | 名称 | 页面文件 |
+|---|---|---|
+| 3 | 列表滑动监听 | `widget/scroll/scroll_listener_demo_page.dart` |
+| 4 | 滑动到指定位置 | `widget/scroll/scroll_to_index_demo_page.dart` |
+| 5 | 滑动到指定位置2 | `widget/scroll/scroll_to_index_demo_page2.dart` |
+| 16 | 滑动验证 | `widget/scroll/slider_verify_page.dart` |
+| 26 | 第三方 viewpager 封装实现 | `widget/scroll/viewpager_demo_page.dart` |
+| 27 | 列表滑动过程控件停靠效果 | `widget/scroll/sliver_list_demo_page.dart` |
+| 32 | 列表滑动停靠 （Stick） | `widget/scroll/stick/stick_demo_page.dart` |
+| 33 | 列表滑动停靠 （Stick）+ 展开收回 | `widget/scroll/stick/stick_demo_page2.dart` |
+| 34 | 列表滑动停靠效果2 （Stick | `widget/scroll/sliver_stick_demo_page.dart` |
+| 40 | 列表滑动过程 item 停靠动画效果 | `widget/scroll/list_anim/list_anim_demo_page.dart` |
+| 41 | 列表滑动过程 item 停靠动画效果2 | `widget/scroll/list_anim_2/list_anim_demo_page.dart` |
+| 44 | 强大的自定义滑动与停靠结合展示 | `widget/scroll/custom_sliver/scroll_header_demo_page.dart` |
+| 45 | 自定义列表内sliver渲染顺序 | `widget/scroll/custom_viewport/custom_viewport_page.dart` |
+| 47 | 列表停靠展开+回到当前头部 | `widget/scroll/stick_sliver_list_demo_page.dart` |
+| 51 | 多列表+顶部Tab效果展示 | `widget/scroll/sliver_tab_demo_page.dart` |
+| 52 | 多列表+顶部Tab效果展示2 | `widget/scroll/sliver_tab_demo_page2.dart` |
+| 53 | 多列表+顶部Tab效果展示3 | `widget/scroll/sliver_tab/sliver_tab_demo_page3.dart` |
+| 58 | 一个有趣的底部跟随和停靠例子 | `widget/scroll/scroll_inner_content_demo_page.dart` |
+| 68 | 类似 boss 直聘我的页面联动效果 | `widget/scroll/link_sliver/link_sliver_demo_page.dart` |
+| 77 | ListView 嵌套 ViewPager 解决斜着滑动问题 | `widget/scroll/vp_list_demo_page.dart` |
+| 78 | 垂直  ViewPager 嵌套垂直 ListView  | `widget/scroll/vp_list_demo_page.dart` |
+| 79 | 垂直  ListView 嵌套垂直  ViewPager | `widget/scroll/vp_list_demo_page.dart` |
+| 80 | 垂直  ListView 联动  ListView | `widget/scroll/vp_list_demo_page.dart` |
+| 91 | 列表联动 BottomSheet 效果 | `widget/scroll/list_link_bottomsheet_demo_page.dart` |
+| 92 | DraggableSheet 的 stick 效果 | `widget/scroll/demo_draggable_sheet_stick_page.dart` |
+| 94 | 点击爆炸的五角星（ChatGPT 生成代码） | `widget/scroll/star_bomb_button_page.dart` |
+| 97 | 自适应横竖列表 | `widget/scroll/unbounded_listview.dart` |
+| 98 | PageView嵌套PageView | `widget/scroll/pageview_in_pageview_demo_page.dart` |
+| 100 | link scroll | `widget/scroll/link_scroll_page.dart` |
+| 115 | 骚气滑动列表 | `widget/scroll/tornado_scroll_demo.dart` |
+| 121 | Shock Wave Chat | `widget/scroll/shock_wave_chat_page.dart` |
+
+#### 动画交互（24）
+
+| # | 名称 | 页面文件 |
+|---|---|---|
+| 20 | 控件动画组合展示（旋转加放大圆） | `widget/animation/anima_demo_page.dart` |
+| 21 | 控件展开动画效果 | `widget/animation/anima_demo_page2.dart` |
+| 37 | 控件动画变形效果 | `widget/animation/animation_container_demo_page.dart` |
+| 39 | 按键切换动画效果 | `widget/animation/anima_demo_page4.dart` |
+| 43 | 文本弹出动画效果 | `widget/animation/anima_demo_page5.dart` |
+| 46 | 点击弹出动画提示 | `widget/animation/anim_tip_demo_page.dart` |
+| 54 | 仿真书本翻页动画（仅APP） | `widget/animation/book_page/book_page.dart` |
+| 55 | 粒子动画效果 | `widget/animation/particle/particle_page.dart` |
+| 56 | 动画背景效果 | `widget/animation/anim_bg_demo_page.dart` |
+| 62 | 动画按键例子 | `widget/animation/anim_button/anim_button_demo_page.dart` |
+| 63 | 类似QQ发送图片的动画 | `widget/animation/anim_progress_img_demo_page.dart` |
+| 64 | 类似探探扫描的动画效果 | `widget/animation/anim_scan_demo_page.dart` |
+| 65 | 圆弧形的 SeekBar（仅APP） | `widget/animation/arc_seek_bar_demo_page.dart` |
+| 66 | 一个国外友人很惊艳的动画效果 | `widget/animation/anim_bubble_gum.dart` |
+| 71 | 第三方的动画字体 | `widget/animation/anim_text_demo_page.dart` |
+| 76 | 控件动画切换效果 | `widget/animation/anim_switch_layout_demo_page.dart` |
+| 96 | 有趣的文本撕裂动画 | `widget/animation/tear_text_demo_page.dart` |
+| 104 | 粒子动画 | `widget/animation/attractor_page.dart` |
+| 105 | 斐波那契球体动画 | `widget/animation/fibonacci_sphere_page.dart` |
+| 107 | 霓虹滑块，100%高亮 | `widget/animation/neon_slider_page.dart` |
+| 109 | 炫酷爆炸粒子 | `widget/animation/boom_particle_page.dart` |
+| 116 | 骚气粒子效果 | `widget/animation/particle_morphing_page.dart` |
+| 117 | 炫酷圣诞树 | `widget/animation/combined_scene_page.dart` |
+| 122 | Particle Effect | `widget/animation/particle_effect_screen.dart` |
+
+#### 绘制与Shader（13）
+
+| # | 名称 | 页面文件 |
+|---|---|---|
+| 36 | Blur 高斯模糊效果 | `widget/canvas/blur_demo_page.dart` |
+| 38 | 时钟动画绘制展示 | `widget/canvas/tick_click_demo_page.dart` |
+| 57 | 手势效果 | `widget/canvas/matrix_custom_painter_page.dart` |
+| 67 | 纯 Canvas 绘制闹钟 | `widget/canvas/canvas_click_demo_page.dart` |
+| 69 | 结合 Matrix 的拖拽 | `widget/canvas/drag_img_demo_page.dart` |
+| 75 | 测试 canvas 阴影 | `widget/canvas/shader_canvas_demo_page.dart` |
+| 85 | 展示 canvas transform | `widget/canvas/transform_canvas_demo_page.dart` |
+| 90 | path 路径 png 效果 | `widget/canvas/custom_shader_path_demo_page.dart` |
+| 99 | 手势密码 | `widget/basic/gesture_password/gesture_password_demo_page.dart` |
+| 101 | glass | `widget/canvas/glass_demo_page.dart` |
+| 102 | liquid glass | `widget/canvas/liquid_glass_demo.dart` |
+| 103 | liquid glass 2 | `widget/canvas/liquid_glass_demo2.dart` |
+| 108 | Radial lines | `widget/canvas/radial_lines_page.dart` |
+
+#### 3D与视觉（17）
+
+| # | 名称 | 页面文件 |
+|---|---|---|
+| 81 | 3D 透视卡片 | `widget/visual/card_perspective_demo_page.dart` |
+| 82 | 3D 卡片旋转 | `widget/visual/card_3d_demo_page.dart` |
+| 83 | 硬核 3D 卡片旋转 | `widget/visual/card_real_3d_demo_page.dart` |
+| 84 | 3D Dash | `widget/visual/dash_3d_demo_page.dart` |
+| 86 | rive 掘金 logo | `widget/visual/anim_juejin_logo_demo_page.dart` |
+| 87 | 掘金 3d logo | `widget/visual/juejin_3d_logo_demo_page.dart` |
+| 88 | 掘金更 3d logo | `widget/visual/juejin_3d_box_logo_demo_page.dart` |
+| 95 | 有趣画廊 | `widget/visual/photo_gallery_demo_page.dart` |
+| 106 | 星云动画 | `widget/visual/galaxy_scene_page.dart` |
+| 111 | 流体太极 | `widget/visual/stream_taichi_page.dart` |
+| 112 | 黑洞流体 | `widget/visual/black_hole_page.dart` |
+| 113 | 太极粒子 | `widget/visual/taichi_page.dart` |
+| 118 | 炫酷二维码 | `widget/visual/notion_qrcode_page.dart` |
+| 119 | Cool Disco Sphere | `widget/visual/disco_sphere_page.dart` |
+| 120 | Cool Spatial Grid | `widget/visual/spatial_grid_page.dart` |
+| 123 | Mosaic Scanner  | `widget/visual/mosaic_scanner_page.dart` |
+| 124 | Koi Fish | `widget/visual/koi_fish_animation.dart` |
+
+### 首页分类后的代码目录
+
+- 路由注册文件：`lib/routes/demo_routes.dart`
+- 首页与分类逻辑：`lib/home/demo_home_page.dart`
+- 分类规则配置（关键词/优先级/手动覆盖）：`lib/home/demo_category_config.dart`
+- 多语言资源：`lib/l10n/`
+- 示例代码按首页分类整理：
+  - `lib/widget/basic/`
+  - `lib/widget/scroll/`
+  - `lib/widget/animation/`
+  - `lib/widget/canvas/`
+  - `lib/widget/visual/`
+
+### Deferred 兼容说明
+
+- `deferred-components` 依赖 `package:` 路径，请保持 `pubspec.yaml` 与 `lib/routes/demo_routes.dart` 的路径一致。
+- 新增/移动示例时，必须同时更新：
+  - `lib/routes/demo_routes.dart` 的 deferred import
+  - `pubspec.yaml` 的 `deferred-components.libraries`
 
 
 
@@ -795,5 +250,3 @@ cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/asse
 
 ![公众号](http://img.cdn.guoshuyu.cn/wechat_qq.png)
 ![](docs/images/thanks.jpg)
-
-

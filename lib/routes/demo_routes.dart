@@ -1,289 +1,290 @@
 import 'package:flutter/material.dart';
 
-import 'package:gsy_flutter_demo/widget/align_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/align_demo_page.dart'
     deferred as align_demo_page;
-import 'package:gsy_flutter_demo/widget/anim_bg_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/anim_bg_demo_page.dart'
     deferred as anim_bg_demo_page;
-import 'package:gsy_flutter_demo/widget/anim_bubble_gum.dart'
+import 'package:gsy_flutter_demo/widget/animation/anim_bubble_gum.dart'
     deferred as anim_bubble_gum;
-import 'package:gsy_flutter_demo/widget/anim_button/anim_button_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/anim_button/anim_button_demo_page.dart'
     deferred as anim_button_demo_page;
-import 'package:gsy_flutter_demo/widget/anim_progress_img_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/anim_progress_img_demo_page.dart'
     deferred as anim_progress_img_demo_page;
-import 'package:gsy_flutter_demo/widget/anim_scan_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/anim_scan_demo_page.dart'
     deferred as anim_scan_demo_page;
-import 'package:gsy_flutter_demo/widget/anim_text_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/anim_text_demo_page.dart'
     deferred as anim_text_demo_page;
-import 'package:gsy_flutter_demo/widget/anim_tip_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/anim_tip_demo_page.dart'
     deferred as anim_tip_demo_page;
-import 'package:gsy_flutter_demo/widget/anima_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/anima_demo_page.dart'
     deferred as anima_demo_page;
-import 'package:gsy_flutter_demo/widget/anima_demo_page2.dart'
+import 'package:gsy_flutter_demo/widget/animation/anima_demo_page2.dart'
     deferred as anima_demo_page2;
-import 'package:gsy_flutter_demo/widget/anima_demo_page4.dart'
+import 'package:gsy_flutter_demo/widget/animation/anima_demo_page4.dart'
     deferred as anima_demo_page4;
-import 'package:gsy_flutter_demo/widget/anima_demo_page5.dart'
+import 'package:gsy_flutter_demo/widget/animation/anima_demo_page5.dart'
     deferred as anima_demo_page5;
-import 'package:gsy_flutter_demo/widget/animation_container_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/animation_container_demo_page.dart'
     deferred as animation_container_demo_page;
-import 'package:gsy_flutter_demo/widget/arc_seek_bar_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/arc_seek_bar_demo_page.dart'
     deferred as arc_seek_bar_demo_page;
-import 'package:gsy_flutter_demo/widget/blur_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/canvas/blur_demo_page.dart'
     deferred as blur_demo_page;
-import 'package:gsy_flutter_demo/widget/book_page/book_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/book_page/book_page.dart'
     deferred as book_page;
-import 'package:gsy_flutter_demo/widget/bottom_anim_nav_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/bottom_anim_nav_page.dart'
     deferred as bottom_anim_nav_page;
-import 'package:gsy_flutter_demo/widget/bubble/bubble_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/bubble/bubble_demo_page.dart'
     deferred as bubble_demo_page;
-import 'package:gsy_flutter_demo/widget/canvas_click_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/canvas/canvas_click_demo_page.dart'
     deferred as canvas_click_demo_page;
-import 'package:gsy_flutter_demo/widget/card_item_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/card_item_page.dart'
     deferred as card_item_page;
-import 'package:gsy_flutter_demo/widget/chat_list_scroll_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/chat_list_scroll_demo_page.dart'
     deferred as chat_list_scroll_demo_page;
-import 'package:gsy_flutter_demo/widget/chat_list_scroll_demo_page_2.dart'
+import 'package:gsy_flutter_demo/widget/basic/chat_list_scroll_demo_page_2.dart'
     deferred as chat_list_scroll_demo_page_2;
-import 'package:gsy_flutter_demo/widget/clip_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/clip_demo_page.dart'
     deferred as clip_demo_page;
-import 'package:gsy_flutter_demo/widget/cloud/cloud_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/cloud/cloud_demo_page.dart'
     deferred as cloud_demo_page;
-import 'package:gsy_flutter_demo/widget/color_progress_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/color_progress_demo_page.dart'
     deferred as color_progress_demo_page;
-import 'package:gsy_flutter_demo/widget/controller_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/controller_demo_page.dart'
     deferred as controller_demo_page;
-import 'package:gsy_flutter_demo/widget/custom_multi_render_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/custom_multi_render_demo_page.dart'
     deferred as custom_multi_render_demo_page;
-import 'package:gsy_flutter_demo/widget/custom_pull/refresh_demo_page3.dart'
+import 'package:gsy_flutter_demo/widget/scroll/custom_pull/refresh_demo_page3.dart'
     deferred as refresh_demo_page3;
-import 'package:gsy_flutter_demo/widget/custom_sliver/scroll_header_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/custom_sliver/scroll_header_demo_page.dart'
     deferred as scroll_header_demo_page;
-import 'package:gsy_flutter_demo/widget/custom_viewport/custom_viewport_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/custom_viewport/custom_viewport_page.dart'
     deferred as custom_viewport_page;
-import 'package:gsy_flutter_demo/widget/drag_img_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/canvas/drag_img_demo_page.dart'
     deferred as drag_img_demo_page;
-import 'package:gsy_flutter_demo/widget/drop_select_menu/drop_select_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/drop_select_menu/drop_select_demo_page.dart'
     deferred as drop_select_demo_page;
-import 'package:gsy_flutter_demo/widget/floating_touch_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/floating_touch_demo_page.dart'
     deferred as floating_touch_demo_page;
-import 'package:gsy_flutter_demo/widget/gradient_text_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/gradient_text_demo_page.dart'
     deferred as gradient_text_demo_page;
-import 'package:gsy_flutter_demo/widget/honor_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/honor_demo_page.dart'
     deferred as honor_demo_page;
-import 'package:gsy_flutter_demo/widget/index_stack_drag_card_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/index_stack_drag_card_demo_page.dart'
     deferred as index_stack_drag_card_demo_page;
-import 'package:gsy_flutter_demo/widget/index_stack_drag_card_demo_page2.dart'
+import 'package:gsy_flutter_demo/widget/basic/index_stack_drag_card_demo_page2.dart'
     deferred as index_stack_drag_card_demo_page2;
-import 'package:gsy_flutter_demo/widget/input_bottom_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/input_bottom_demo_page.dart'
     deferred as input_bottom_demo_page;
-import 'package:gsy_flutter_demo/widget/keyboard_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/keyboard_demo_page.dart'
     deferred as keyboard_demo_page;
-import 'package:gsy_flutter_demo/widget/link_sliver/link_sliver_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/link_sliver/link_sliver_demo_page.dart'
     deferred as link_sliver_demo_page;
-import 'package:gsy_flutter_demo/widget/list_anim/list_anim_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/list_anim/list_anim_demo_page.dart'
     deferred as list_anim_demo_page;
-import 'package:gsy_flutter_demo/widget/list_anim_2/list_anim_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/list_anim_2/list_anim_demo_page.dart'
     deferred as list_anim_demo_page2;
-import 'package:gsy_flutter_demo/widget/matrix_custom_painter_page.dart'
+import 'package:gsy_flutter_demo/widget/canvas/matrix_custom_painter_page.dart'
     deferred as matrix_custom_painter_page;
-import 'package:gsy_flutter_demo/widget/overflow_image_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/overflow_image_page.dart'
     deferred as overflow_image_page;
-import 'package:gsy_flutter_demo/widget/particle/particle_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/particle/particle_page.dart'
     deferred as particle_page;
-import 'package:gsy_flutter_demo/widget/positioned_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/positioned_demo_page.dart'
     deferred as positioned_demo_page;
-import 'package:gsy_flutter_demo/widget/refresh_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/refresh_demo_page.dart'
     deferred as refresh_demo_page;
-import 'package:gsy_flutter_demo/widget/refresh_demo_page2.dart'
+import 'package:gsy_flutter_demo/widget/basic/refresh_demo_page2.dart'
     deferred as refresh_demo_page2;
-import 'package:gsy_flutter_demo/widget/rich_text_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/rich_text_demo_page.dart'
     deferred as rich_text_demo_page;
-import 'package:gsy_flutter_demo/widget/rich_text_demo_page2.dart'
+import 'package:gsy_flutter_demo/widget/basic/rich_text_demo_page2.dart'
     deferred as rich_text_demo_page2;
-import 'package:gsy_flutter_demo/widget/route_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/route_demo_page.dart'
     deferred as route_demo_page;
-import 'package:gsy_flutter_demo/widget/scroll_inner_content_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/scroll_inner_content_demo_page.dart'
     deferred as scroll_inner_content_demo_page;
-import 'package:gsy_flutter_demo/widget/scroll_listener_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/scroll_listener_demo_page.dart'
     deferred as scroll_listener_demo_page;
-import 'package:gsy_flutter_demo/widget/scroll_to_index_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/scroll_to_index_demo_page.dart'
     deferred as scroll_to_index_demo_page;
-import 'package:gsy_flutter_demo/widget/scroll_to_index_demo_page2.dart'
+import 'package:gsy_flutter_demo/widget/scroll/scroll_to_index_demo_page2.dart'
     deferred as scroll_to_index_demo_page2;
-import 'package:gsy_flutter_demo/widget/slider_verify_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/slider_verify_page.dart'
     deferred as slider_verify_page;
-import 'package:gsy_flutter_demo/widget/sliver_list_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/sliver_list_demo_page.dart'
     deferred as sliver_list_demo_page;
-import 'package:gsy_flutter_demo/widget/sliver_stick_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/sliver_stick_demo_page.dart'
     deferred as sliver_stick_demo_page;
-import 'package:gsy_flutter_demo/widget/sliver_tab/sliver_tab_demo_page3.dart'
+import 'package:gsy_flutter_demo/widget/scroll/sliver_tab/sliver_tab_demo_page3.dart'
     deferred as sliver_tab_demo_page3;
-import 'package:gsy_flutter_demo/widget/sliver_tab_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/sliver_tab_demo_page.dart'
     deferred as sliver_tab_demo_page;
-import 'package:gsy_flutter_demo/widget/sliver_tab_demo_page2.dart'
+import 'package:gsy_flutter_demo/widget/scroll/sliver_tab_demo_page2.dart'
     deferred as sliver_tab_demo_page2;
-import 'package:gsy_flutter_demo/widget/statusbar_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/statusbar_demo_page.dart'
     deferred as statusbar_demo_page;
-import 'package:gsy_flutter_demo/widget/stick/stick_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/stick/stick_demo_page.dart'
     deferred as stick_demo_page;
-import 'package:gsy_flutter_demo/widget/stick/stick_demo_page2.dart'
+import 'package:gsy_flutter_demo/widget/scroll/stick/stick_demo_page2.dart'
     deferred as stick_demo_page2;
-import 'package:gsy_flutter_demo/widget/stick_sliver_list_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/stick_sliver_list_demo_page.dart'
     deferred as stick_sliver_list_demo_page;
-import 'package:gsy_flutter_demo/widget/tag_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/tag_demo_page.dart'
     deferred as tag_demo_page;
-import 'package:gsy_flutter_demo/widget/text_line_height_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/text_line_height_demo_page.dart'
     deferred as text_line_height_demo_page;
-import 'package:gsy_flutter_demo/widget/text_size_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/text_size_demo_page.dart'
     deferred as text_size_demo_page;
-import 'package:gsy_flutter_demo/widget/tick_click_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/canvas/tick_click_demo_page.dart'
     deferred as tick_click_demo_page;
-import 'package:gsy_flutter_demo/widget/transform_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/transform_demo_page.dart'
     deferred as transform_demo_page;
-import 'package:gsy_flutter_demo/widget/verification_code_input_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/verification_code_input_demo_page.dart'
     deferred as verification_code_input_demo_page;
-import 'package:gsy_flutter_demo/widget/verification_code_input_demo_page2.dart'
+import 'package:gsy_flutter_demo/widget/basic/verification_code_input_demo_page2.dart'
     deferred as verification_code_input_demo_page2;
-import 'package:gsy_flutter_demo/widget/viewpager_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/viewpager_demo_page.dart'
     deferred as viewpager_demo_page;
-import 'package:gsy_flutter_demo/widget/wrap_content_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/wrap_content_page.dart'
     deferred as wrap_content_page;
 
-import 'package:gsy_flutter_demo/widget/shader_canvas_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/canvas/shader_canvas_demo_page.dart'
     deferred as shader_canvas_demo_page;
 
-import 'package:gsy_flutter_demo/widget/anim_switch_layout_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/anim_switch_layout_demo_page.dart'
     deferred as anim_switch_layout_demo_page;
 
-import 'package:gsy_flutter_demo/widget/vp_list_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/vp_list_demo_page.dart'
     deferred as vp_list_demo_page;
 
-import 'package:gsy_flutter_demo/widget/card_perspective_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/card_perspective_demo_page.dart'
     deferred as card_perspective_demo_page;
 
-import 'package:gsy_flutter_demo/widget/card_3d_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/card_3d_demo_page.dart'
     deferred as card_3d_demo_page;
 
-import 'package:gsy_flutter_demo/widget/card_real_3d_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/card_real_3d_demo_page.dart'
     deferred as card_real_3d_demo_page;
 
-import 'package:gsy_flutter_demo/widget/anim_juejin_logo_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/anim_juejin_logo_demo_page.dart'
     deferred as anim_juejin_logo_demo_page;
 
-import 'package:gsy_flutter_demo/widget/dash_3d_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/dash_3d_demo_page.dart'
     deferred as dash_3d_demo_page;
 
-import 'package:gsy_flutter_demo/widget/png_shadow_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/png_shadow_demo_page.dart'
     deferred as png_shadow_demo_page;
 
-import 'package:gsy_flutter_demo/widget/transform_canvas_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/canvas/transform_canvas_demo_page.dart'
     deferred as transform_canvas_demo_page;
 
-import 'package:gsy_flutter_demo/widget/juejin_3d_logo_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/juejin_3d_logo_demo_page.dart'
     deferred as juejin_3d_logo_demo_page;
 
-import 'package:gsy_flutter_demo/widget/juejin_3d_box_logo_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/juejin_3d_box_logo_demo_page.dart'
     deferred as juejin_3d_box_logo_demo_page;
 
-import 'package:gsy_flutter_demo/widget/custom_shader_path_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/canvas/custom_shader_path_demo_page.dart'
     deferred as custom_shader_path_demo_page;
 
-import 'package:gsy_flutter_demo/widget/list_link_bottomsheet_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/list_link_bottomsheet_demo_page.dart'
     deferred as list_link_bottomsheet_demo_page;
 
-import 'package:gsy_flutter_demo/widget/demo_draggable_sheet_stick_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/demo_draggable_sheet_stick_page.dart'
     deferred as demo_draggable_sheet_stick_page;
 
-import 'package:gsy_flutter_demo/widget/async_to_sync_call_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/async_to_sync_call_page.dart'
     deferred as async_to_sync_call_page;
 
-import 'package:gsy_flutter_demo/widget/star_bomb_button_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/star_bomb_button_page.dart'
     deferred as star_bomb_button_page;
 
-import 'package:gsy_flutter_demo/widget/photo_gallery_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/photo_gallery_demo_page.dart'
     deferred as photo_gallery_demo_page;
 
-import 'package:gsy_flutter_demo/widget/tear_text_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/tear_text_demo_page.dart'
     deferred as tear_text_demo_page;
 
-import 'package:gsy_flutter_demo/widget/unbounded_listview.dart'
+import 'package:gsy_flutter_demo/widget/scroll/unbounded_listview.dart'
     deferred as unbounded_listview;
 
-import 'package:gsy_flutter_demo/widget/pageview_in_pageview_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/pageview_in_pageview_demo_page.dart'
     deferred as pageview_in_pageview_demo_page;
 
-import 'package:gsy_flutter_demo/widget/gesture_password/gesture_password_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/basic/gesture_password/gesture_password_demo_page.dart'
     deferred as gesture_password_demo_page;
 
-import 'package:gsy_flutter_demo/widget/link_scroll_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/link_scroll_page.dart'
     deferred as link_scroll_page;
 
-import 'package:gsy_flutter_demo/widget/glass_demo_page.dart'
+import 'package:gsy_flutter_demo/widget/canvas/glass_demo_page.dart'
     deferred as glass_demo_page;
 
-import 'package:gsy_flutter_demo/widget/liquid_glass_demo.dart'
+import 'package:gsy_flutter_demo/widget/canvas/liquid_glass_demo.dart'
     deferred as liquid_glass_demo;
 
-import 'package:gsy_flutter_demo/widget/liquid_glass_demo2.dart'
+import 'package:gsy_flutter_demo/widget/canvas/liquid_glass_demo2.dart'
     deferred as liquid_glass_demo2;
 
-import 'package:gsy_flutter_demo/widget/attractor_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/attractor_page.dart'
     deferred as attractor_page;
-import 'package:gsy_flutter_demo/widget/fibonacci_sphere_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/fibonacci_sphere_page.dart'
     deferred as fibonacci_sphere_page;
-import 'package:gsy_flutter_demo/widget/galaxy_scene_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/galaxy_scene_page.dart'
     deferred as galaxy_scene_page;
 
-import 'package:gsy_flutter_demo/widget/neon_slider_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/neon_slider_page.dart'
     deferred as neon_slider_page;
 
-import 'package:gsy_flutter_demo/widget/radial_lines_page.dart'
+import 'package:gsy_flutter_demo/widget/canvas/radial_lines_page.dart'
     deferred as radial_lines_page;
-import 'package:gsy_flutter_demo/widget/boom_particle_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/boom_particle_page.dart'
     deferred as boom_particle_page;
 
-import 'package:gsy_flutter_demo/widget/black_hole_simulation_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/black_hole_simulation_page.dart'
     deferred as black_hole_simulation_page;
 
-import 'package:gsy_flutter_demo/widget/stream_taichi_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/stream_taichi_page.dart'
     deferred as stream_taichi_page;
 
-import 'package:gsy_flutter_demo/widget/black_hole_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/black_hole_page.dart'
     deferred as black_hole_page;
 
-import 'package:gsy_flutter_demo/widget/taichi_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/taichi_page.dart'
     deferred as taichi_page;
 
-import 'package:gsy_flutter_demo/widget/tornado_scroll_demo.dart'
+import 'package:gsy_flutter_demo/widget/scroll/tornado_scroll_demo.dart'
     deferred as tornado_scroll_demo;
 
-import 'package:gsy_flutter_demo/widget/particle_morphing_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/particle_morphing_page.dart'
     deferred as particle_morphing_page;
 
-import 'package:gsy_flutter_demo/widget/combined_scene_page.dart'
+import 'package:gsy_flutter_demo/widget/animation/combined_scene_page.dart'
     deferred as combined_scene_page;
-import 'package:gsy_flutter_demo/widget/notion_qrcode_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/notion_qrcode_page.dart'
     deferred as notion_qrcode_page;
 
-import 'package:gsy_flutter_demo/widget/disco_sphere_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/disco_sphere_page.dart'
     deferred as disco_sphere_page;
 
-import 'package:gsy_flutter_demo/widget/spatial_grid_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/spatial_grid_page.dart'
     deferred as spatial_grid_page;
 
-import 'package:gsy_flutter_demo/widget/shock_wave_chat_page.dart'
+import 'package:gsy_flutter_demo/widget/scroll/shock_wave_chat_page.dart'
     deferred as shock_wave_chat_page;
 
-import 'package:gsy_flutter_demo/widget/particle_effect_screen.dart'
+import 'package:gsy_flutter_demo/widget/animation/particle_effect_screen.dart'
     deferred as particle_effect_screen;
 
-import 'package:gsy_flutter_demo/widget/mosaic_scanner_page.dart'
+import 'package:gsy_flutter_demo/widget/visual/mosaic_scanner_page.dart'
     deferred as mosaic_scanner_page;
 
-import 'package:gsy_flutter_demo/widget/koi_fish_animation.dart'
+import 'package:gsy_flutter_demo/widget/visual/koi_fish_animation.dart'
     deferred as koi_fish_animation;
 
-import 'package:gsy_flutter_demo/widget/akaza_page.dart' deferred as akaza_page;
+import 'package:gsy_flutter_demo/widget/basic/akaza_page.dart'
+    deferred as akaza_page;
 
 class ContainerAsyncRouterPage extends StatelessWidget {
   final Future libraryFuture;
@@ -293,6 +294,65 @@ class ContainerAsyncRouterPage extends StatelessWidget {
   final WidgetBuilder child;
 
   const ContainerAsyncRouterPage(this.libraryFuture, this.child, {super.key});
+
+  Widget _ensureTitle(BuildContext context, Widget page) {
+    if (page is! Scaffold) {
+      return page;
+    }
+
+    final routeName = ModalRoute.of(context)?.settings.name?.trim();
+    final fallbackTitle = (routeName != null && routeName.isNotEmpty)
+        ? routeName
+        : page.runtimeType.toString();
+
+    final appBar = page.appBar;
+    if (appBar == null) {
+      return _copyScaffoldWithAppBar(page, AppBar(title: Text(fallbackTitle)));
+    }
+
+    if (appBar is AppBar) {
+      final titleWidget = appBar.title;
+      final hasTitle = titleWidget != null &&
+          (titleWidget is! Text ||
+              ((titleWidget.data ?? '').trim().isNotEmpty) ||
+              titleWidget.textSpan != null);
+      if (!hasTitle) {
+        return _copyScaffoldWithAppBar(
+            page, AppBar(title: Text(fallbackTitle)));
+      }
+    }
+
+    return page;
+  }
+
+  Scaffold _copyScaffoldWithAppBar(
+      Scaffold source, PreferredSizeWidget appBar) {
+    return Scaffold(
+      key: source.key,
+      appBar: appBar,
+      body: source.body,
+      floatingActionButton: source.floatingActionButton,
+      floatingActionButtonLocation: source.floatingActionButtonLocation,
+      floatingActionButtonAnimator: source.floatingActionButtonAnimator,
+      persistentFooterButtons: source.persistentFooterButtons,
+      persistentFooterAlignment: source.persistentFooterAlignment,
+      drawer: source.drawer,
+      onDrawerChanged: source.onDrawerChanged,
+      endDrawer: source.endDrawer,
+      onEndDrawerChanged: source.onEndDrawerChanged,
+      bottomNavigationBar: source.bottomNavigationBar,
+      bottomSheet: source.bottomSheet,
+      backgroundColor: source.backgroundColor,
+      resizeToAvoidBottomInset: source.resizeToAvoidBottomInset,
+      primary: source.primary,
+      drawerDragStartBehavior: source.drawerDragStartBehavior,
+      extendBody: source.extendBody,
+      extendBodyBehindAppBar: source.extendBodyBehindAppBar,
+      drawerScrimColor: source.drawerScrimColor,
+      drawerEdgeDragWidth: source.drawerEdgeDragWidth,
+      restorationId: source.restorationId,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -312,7 +372,7 @@ class ContainerAsyncRouterPage extends StatelessWidget {
                 ),
               );
             }
-            return child.call(context);
+            return _ensureTitle(context, child.call(context));
           }
           return Scaffold(
             appBar: AppBar(),
