@@ -1,4 +1,4 @@
-![](./logo.png)
+![](docs/images/logo.png)
 
 # GSY Flutter Demo
 
@@ -42,19 +42,19 @@
 
 |                  |                  |                  |                  |                  |
 |------------------|------------------|------------------|------------------|------------------|
-| ![](demo1.gif)   | ![](demo2.webp)  | ![](demo3.webp)  | ![](demo4.webp)  | ![](demo5.webp)  |
-| ![](demo6.webp)  | ![](demo7.webp)  | ![](demo8.webp)  | ![](demo9.webp)  | ![](demo10.webp) |
-| ![](demo11.webp) | ![](demo12.webp) | ![](demo13.webp) | ![](demo14.webp) | ![](demo15.webp) |
-| ![](demo16.webp) | ![](demo17.webp) | ![](demo18.webp) | ![](demo19.webp) | ![](demo20.gif)  | 
+| ![](docs/images/demo1.gif)   | ![](docs/images/demo2.webp)  | ![](docs/images/demo3.webp)  | ![](docs/images/demo4.webp)  | ![](docs/images/demo5.webp)  |
+| ![](docs/images/demo6.webp)  | ![](docs/images/demo7.webp)  | ![](docs/images/demo8.webp)  | ![](docs/images/demo9.webp)  | ![](docs/images/demo10.webp) |
+| ![](docs/images/demo11.webp) | ![](docs/images/demo12.webp) | ![](docs/images/demo13.webp) | ![](docs/images/demo14.webp) | ![](docs/images/demo15.webp) |
+| ![](docs/images/demo16.webp) | ![](docs/images/demo17.webp) | ![](docs/images/demo18.webp) | ![](docs/images/demo19.webp) | ![](docs/images/demo20.gif)  | 
 
 
-![](demo.jpg)
+![](docs/images/demo.jpg)
 
 ### 已有例子
 
 ```dart
 
-Map<String, WidgetBuilder> routers = {
+Map<String, WidgetBuilder> demoRoutes = {
   "文本输入框简单的 Controller": (context) {
     return ContainerAsyncRouterPage(controller_demo_page.loadLibrary(),
             (context) {
@@ -103,18 +103,18 @@ Map<String, WidgetBuilder> routers = {
         });
   },
   "简单上下刷新": (context) {
-    return ContainerAsyncRouterPage(refrsh_demo_page.loadLibrary(), (context) {
-      return refrsh_demo_page.RefreshDemoPage();
+    return ContainerAsyncRouterPage(refresh_demo_page.loadLibrary(), (context) {
+      return refresh_demo_page.RefreshDemoPage();
     });
   },
   "简单上下刷新2": (context) {
-    return ContainerAsyncRouterPage(refrsh_demo_page2.loadLibrary(), (context) {
-      return refrsh_demo_page2.RefreshDemoPage2();
+    return ContainerAsyncRouterPage(refresh_demo_page2.loadLibrary(), (context) {
+      return refresh_demo_page2.RefreshDemoPage2();
     });
   },
   "简单上下刷新3": (context) {
-    return ContainerAsyncRouterPage(refrsh_demo_page3.loadLibrary(), (context) {
-      return refrsh_demo_page3.RefreshDemoPage3();
+    return ContainerAsyncRouterPage(refresh_demo_page3.loadLibrary(), (context) {
+      return refresh_demo_page3.RefreshDemoPage3();
     });
   },
   "通过绝对定位布局": (context) {
@@ -139,9 +139,9 @@ Map<String, WidgetBuilder> routers = {
     });
   },
   "滑动验证": (context) {
-    return ContainerAsyncRouterPage(silder_verify_page.loadLibrary(),
+    return ContainerAsyncRouterPage(slider_verify_page.loadLibrary(),
             (context) {
-          return silder_verify_page.SlideVerifyPage();
+          return slider_verify_page.SlideVerifyPage();
         });
   },
   "warpContent实现": (context) {
@@ -617,9 +617,9 @@ Map<String, WidgetBuilder> routers = {
         });
   },
   "自适应横竖列表": (context) {
-    return ContainerAsyncRouterPage(un_bounded_listview.loadLibrary(),
+    return ContainerAsyncRouterPage(unbounded_listview.loadLibrary(),
             (context) {
-          return un_bounded_listview.UnboundedListViewDemoPage();
+          return unbounded_listview.UnboundedListViewDemoPage();
         });
   },
   "PageView嵌套PageView": (context) {
@@ -794,6 +794,6 @@ cp -r ./build/app/intermediates/flutter/release/flutter_assets/ ./build/web/asse
 - ## [Flutter 完整开发实战详解 Gitbook 预览下载](https://github.com/CarGuo/GSYFlutterBook)
 
 ![公众号](http://img.cdn.guoshuyu.cn/wechat_qq.png)
-![](http://img.cdn.guoshuyu.cn/thanks.jpg)
+![](docs/images/thanks.jpg)
 
 

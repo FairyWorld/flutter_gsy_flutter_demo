@@ -1,0 +1,18 @@
+{
+  "@@locale": "en",
+  "appTitle": "GSY Flutter Demo",
+  "homeSubtitle": "Browse by category, search quickly, and open examples in one tap.",
+  "allExamples": "All examples",
+  "filteredResults": "Filtered",
+  "currentShown": "Shown",
+  "searchHint": "Search examples",
+  "noMatchExamples": "No matching examples",
+  "language": "Language",
+  "switchToChinese": "Switch to Chinese",
+  "switchToEnglish": "Switch to English",
+  "categoryBasic": "Basics",
+  "categoryScroll": "Scrolling",
+  "categoryAnimation": "Animation",
+  "categoryCanvas": "Canvas & Shader",
+  "categoryVisual": "3D & Visual"
+}

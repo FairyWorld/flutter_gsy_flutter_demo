@@ -1,0 +1,18 @@
+{
+  "@@locale": "zh",
+  "appTitle": "GSY Flutter Demo",
+  "homeSubtitle": "分组浏览、快速检索，一键进入示例。",
+  "allExamples": "全部示例",
+  "filteredResults": "筛选结果",
+  "currentShown": "当前显示",
+  "searchHint": "搜索示例名称（中英文均可）",
+  "noMatchExamples": "没有匹配的示例",
+  "language": "语言",
+  "switchToChinese": "切换中文",
+  "switchToEnglish": "切换英文",
+  "categoryBasic": "基础控件",
+  "categoryScroll": "列表滚动",
+  "categoryAnimation": "动画交互",
+  "categoryCanvas": "绘制与Shader",
+  "categoryVisual": "3D与视觉"
+}
